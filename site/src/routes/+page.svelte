@@ -659,12 +659,13 @@
 		z-index: 3;
 		display: flex;
 		align-items: flex-start;
-		padding: 6rem 0 0 2rem;
+		padding: 4rem 0 0 2rem;
 	}
 	@media (min-width: 901px) {
 		.opener-title {
 			grid-column: 1 / 2;
 			grid-row: 1 / 3;
+      padding: 6rem 0 0 2rem;
 		}
 	}
 
