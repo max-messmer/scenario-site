@@ -90,7 +90,7 @@
 	});
 
 	function wordXTransform(xSpeed: number): string {
-		if (xSpeed === 0) return '';
+		if (xSpeed === 0 || innerWidth < 601) return '';
 		const x = lyricOffset * xSpeed;
 		return `transform: translateX(${x}px)`;
 	}
@@ -204,7 +204,7 @@
 			<img src="/photos/7.webp" alt="Band in the woods" />
 		</div>
 		<div class="split-text">
-			<p class="split-headline mb-2">STARS ARE<br class="desktop-only"/> GOING BLACK<br/> AND THEY<br class="desktop-only"/> AREN'T COMING BACK.</p>
+			<p class="split-headline mb-2">STARS ARE<br class="desktop-only"/> GOING BLACK<br class="desktop-only"/><br class="desktop-only"/> AND THEY<br class="desktop-only"/> AREN'T COMING BACK.</p>
       <span class="eyebrow">About</span>
 			<div class="rule"></div>
 			<p class="split-body">
@@ -706,7 +706,7 @@
 	.opener-image-1 {
 		grid-column: 1;
 		grid-row: 2;
-		height: 50vh;
+		height: 300px;
 		margin-left: 0;
 		margin-top: -3rem;
 		z-index: 2;
@@ -760,7 +760,7 @@
 	.split-image {
 		position: relative;
 		overflow: hidden;
-		height: 700px;
+		height: 300px;
 	}
 	@media (min-width: 901px) {
 		.split-image { height: auto; }
@@ -853,7 +853,7 @@
 	   ============================================ */
 	.lyric-section {
 		width: 100%;
-		padding: 6rem 0 0;
+		padding: 4rem 0 0;
 		background: #00171f;
 		display: flex;
 		flex-direction: column;
@@ -967,10 +967,15 @@
 	   WATCH
 	   ============================================ */
 	.watch-section {
-		padding: 4rem 2rem;
+		padding: 2rem 2rem;
 		max-width: 1500px;
 		margin: 0 auto;
 	}
+  @media (min-width: 901px) {
+    .watch-section {
+      padding: 4rem 2rem;
+    }
+  }
 
 	.watch-header {
 		margin-bottom: 3rem;
@@ -1002,19 +1007,29 @@
 
 	.watch-embed iframe {
 		width: 100%;
-		height: 650px;
+		height: 350px;
 		border: 0;
 		cursor: auto;
 	}
+  @media (min-width: 901px) {
+    .watch-embed iframe {
+      height: 650px;
+    }
+  }
 
 	/* ============================================
 	   FIND US
 	   ============================================ */
 	.findus-section {
-		padding: 4rem 2rem;
+		padding: 2rem 2rem;
 		max-width: 1500px;
 		margin: 0 auto;
 	}
+  @media (min-width: 901px) {
+    .findus-section {
+      padding: 4rem 2rem;
+    }
+  }
 
 	.findus-header {
 		margin-bottom: 3rem;
